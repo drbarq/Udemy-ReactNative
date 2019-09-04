@@ -15,7 +15,7 @@ const TextScreen = () => {
             onChangeText={(newPassword) => setPassword(newPassword)}
             >
             </TextInput>
-            {password.length > 4 ? null : <Text>Please enter a password longer than 5 characters</Text>}
+            {password.length > 4 ? null : <Text>Please must be 4 characters</Text>}
         </View>
     )
 }
