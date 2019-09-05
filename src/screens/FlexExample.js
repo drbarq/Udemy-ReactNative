@@ -3,53 +3,39 @@ import { View, Text, StyleSheet } from 'react-native'
 
 
 const FlexExample = () => {
-    return (
-        <View>
-            <View style={styles.viewHeader}>
-                <Text style={styles.header}>App</Text>
-            </View>
-            <View style={styles.boxContainer}>
-                <Text style={[styles.boxProperties, styles.box1]}>Box 1</Text>
-                <Text style={[styles.boxProperties, styles.box2]}>Box 2</Text>
-                <Text style={[styles.boxProperties, styles.box3]}>Box 3</Text>
-            </View>
+    return (           
+        <View style={styles.parentStyle}>
+            <View style={styles.viewOne}></View>
+            <View style={styles.viewTwo}></View>
+            <View style={styles.viewThree}></View>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    header: {
-        fontSize: 30,
-        textAlign: 'center',
-        padding: 10
-    },
-    viewHeader: {
-        alignSelf: 'stretch',
+    parentStyle: {
+        borderWidth: 3,
         borderColor: 'black',
-        borderWidth: 1
-    },
-    boxContainer: {
-        borderWidth: 1,
-        borderColor: 'black',
+        height: 100,
         flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        height: 200
+        justifyContent: 'space-between'
     },
-    boxProperties: {
-        borderColor: 'black',
-        borderWidth: 1,
-        flex: 1,
-        height: 100
+    viewOne: {
+        backgroundColor: 'red',
+        height: 50,
+        width: 50
     },
-    box1: {
-        backgroundColor: 'red'
-    },
-    box2: {
+    viewTwo: {
         backgroundColor: 'green',
-        alignSelf: 'stretch'
+        height: 50,
+        width: 50,
+        alignSelf: "flex-end"
+        // marginTop: 50
     },
-    box3: {
-        backgroundColor: 'purple'
+    viewThree: {
+        backgroundColor: 'purple',
+        height: 50,
+        width: 50
     }
 })
 
