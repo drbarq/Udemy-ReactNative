@@ -19,18 +19,23 @@ const styles = StyleSheet.create({
     },
     textOneStyle: {
         borderWidth: 3,
-        borderColor: 'red',
-        flex: 4
+        borderColor: 'red'
     },
     textTwoStyle: {
         borderWidth: 3,
         borderColor: 'red',
-        flex: 4
+        fontSize: 18,
+        // two ways to do the same thing
+        ...StyleSheet.absoluteFillObject
+        // position: 'absolute',
+        // top: 0,
+        // bottom: 0,
+        // left: 0,
+        // right: 0
     },
     textThreeStyle: {
         borderWidth: 3,
-        borderColor: 'red',
-        flex: 2
+        borderColor: 'red'
     }
 })
 
